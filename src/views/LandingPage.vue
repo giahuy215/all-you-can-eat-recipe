@@ -39,7 +39,7 @@
 						arrows
 						:dots="false"
 						:slidesToShow="numberSlide"
-						class="carousel"
+						class="font-default"
 					>
 						<template #prevArrow>
 							<div
@@ -145,7 +145,7 @@
 </script>
 
 <style scoped>
-	.carousel {
+	.font-default {
 		font-family: "Syne", sans-serif;
 	}
 
