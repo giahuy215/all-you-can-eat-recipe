@@ -26,16 +26,8 @@
 				></div>
 				<div class="absolute flex flex-col mx-10 bottom-24 gap-y-5 z-10">
 					<!-- Tag name of category -->
-					<div class="flex flex-row gap-x-2">
-						<template v-for="tag in item.tagName">
-							<div class="flex bg-white items-center justify-center rounded">
-								<p class="text-sm uppercase font-medium px-3 py-2">
-									{{ tag }}
-								</p>
-							</div>
-						</template>
-					</div>
-
+					<TagName :listTagName="item.tagName" />
+					<!-- Title of slide -->
 					<div class="text-[40px] leading-tight font-bold text-white">
 						{{ item.title }}
 					</div>
@@ -77,6 +69,7 @@
 
 <script setup>
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
+	import TagName from "./tagName.vue";
 
 	const arrSlide = [
 		{
