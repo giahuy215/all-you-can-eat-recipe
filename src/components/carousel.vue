@@ -26,7 +26,7 @@
 				></div>
 				<div class="absolute flex flex-col mx-10 bottom-24 gap-y-5 z-10">
 					<!-- Tag name of category -->
-					<TagName :listTagName="item.tagName" />
+					<TagCategoryName :listTagName="item.tagName" />
 					<!-- Title of slide -->
 					<div class="text-[40px] leading-tight font-bold text-white">
 						{{ item.title }}
@@ -69,7 +69,7 @@
 
 <script setup>
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
-	import TagName from "./tagName.vue";
+	import TagCategoryName from "./tagCategoryName.vue";
 
 	const arrSlide = [
 		{
