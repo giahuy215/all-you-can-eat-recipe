@@ -30,7 +30,7 @@
 	<!-- List Category -->
 	<section class="mt-16">
 		<MainLayout>
-			<div class="flex flex-col py-2 justify-between">
+			<div class="flex flex-col pt-2 justify-between">
 				<div class="text-[56px] text-secondary-color font-bold">
 					Recipes by category
 				</div>
@@ -67,6 +67,14 @@
 				</div>
 			</div>
 		</MainLayout>
+	</section>
+	<!-- Newest Recipes Title -->
+	<section>
+		<div class="flex w-full h-[242px] bg-secondary-color items-center">
+			<MainLayout>
+				<h2 class="text-white font-bold text-[56px]">Newest recipes</h2>
+			</MainLayout>
+		</div>
 	</section>
 </template>
 
