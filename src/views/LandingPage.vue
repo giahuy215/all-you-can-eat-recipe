@@ -76,13 +76,19 @@
 			</MainLayout>
 		</div>
 	</section>
+	<!-- Newest Recipes List -->
+	<section class="mt-20">
+		<MainLayout>
+			<div>any thing</div>
+		</MainLayout>
+	</section>
 </template>
 
 <script setup>
 	import Header from "../components/header.vue";
 	import Carousel from "../components/carousel.vue";
 	import MainLayout from "../components/layout/MainLayout.vue";
-	import MiniCard from "../components/mini-card.vue";
+	import MiniCard from "../components/miniCard.vue";
 	import constant from "../utils/constant";
 	import { computed, onMounted, ref, watch } from "vue";
 
