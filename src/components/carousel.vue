@@ -33,33 +33,14 @@
 					</div>
 					<!-- Cooking Specifications -->
 					<div class="flex flex-row gap-x-2">
-						<div
-							class="flex flex-row px-2 py-2 border border-white rounded text-white gap-x-1"
-						>
-							<img src="../assets/icons/user-icon.svg" />
-							<div class="flex flex-col">
-								<p class="text-[8px] uppercase">Servings</p>
-								<p class="text-sm">{{ item.servings }}</p>
-							</div>
-						</div>
-						<div
-							class="flex flex-row px-2 py-2 border border-white rounded text-white gap-x-1"
-						>
-							<img src="../assets/icons/clock-icon.svg" />
-							<div class="flex flex-col">
-								<p class="text-[8px] uppercase">Prep</p>
-								<p class="text-sm">{{ item.prep }}</p>
-							</div>
-						</div>
-						<div
-							class="flex flex-row px-2 py-2 border border-white rounded text-white gap-x-1"
-						>
-							<img src="../assets/icons/clock-icon.svg" />
-							<div class="flex flex-col">
-								<p class="text-[8px] uppercase">Prep</p>
-								<p class="text-sm">{{ item.cook }}</p>
-							</div>
-						</div>
+						<template v-for="detail in item.detail">
+							<TagDetailPrep
+								class="text-white border-white"
+								:icon="detail.icons"
+								:title="detail.title"
+								:content="detail.content"
+							/>
+						</template>
 					</div>
 				</div>
 			</div>
@@ -70,31 +51,80 @@
 <script setup>
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
 	import TagCategoryName from "./tagCategoryName.vue";
+	import TagDetailPrep from "./tagDetailPrep.vue";
 
 	const arrSlide = [
 		{
 			src: "/src/assets/images/slide-1.jpeg",
 			tagName: ["Dinner", "Lunch"],
 			title: "Cozy Weekend Chili",
-			servings: "8 servings",
-			prep: "20 mins prep",
-			cook: "40 mins cook",
+			detail: [
+				{
+					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+					title: "Servings",
+					content: "8 servings",
+				},
+				{
+					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
+						.href,
+					title: "Prep",
+					content: "20 mins prep",
+				},
+				{
+					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
+						.href,
+					title: "Prep",
+					content: "40 mins cook",
+				},
+			],
 		},
 		{
 			src: "/src/assets/images/slide-2.jpeg",
 			tagName: ["Breakfast", "Dessert"],
 			title: "Cinnamon Rolls",
-			servings: "8 servings",
-			prep: "10 mins prep",
-			cook: "30 mins cook",
+			detail: [
+				{
+					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+					title: "Servings",
+					content: "8 servings",
+				},
+				{
+					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
+						.href,
+					title: "Prep",
+					content: "10 mins prep",
+				},
+				{
+					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
+						.href,
+					title: "Prep",
+					content: "30 mins cook",
+				},
+			],
 		},
 		{
 			src: "/src/assets/images/slide-3.jpeg",
 			tagName: ["Lunch", "Dinner"],
 			title: "Roasted Butternut Squash Soup",
-			servings: "6 servings",
-			prep: "20 mins prep",
-			cook: "30 mins cook",
+			detail: [
+				{
+					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+					title: "Servings",
+					content: "6 servings",
+				},
+				{
+					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
+						.href,
+					title: "Prep",
+					content: "20 mins prep",
+				},
+				{
+					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
+						.href,
+					title: "Prep",
+					content: "30 mins cook",
+				},
+			],
 		},
 	];
 </script>
