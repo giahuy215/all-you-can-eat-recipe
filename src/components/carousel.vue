@@ -53,6 +53,12 @@
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
 	import TagCategoryName from "./tagCategoryName.vue";
 	import TagDetailPrep from "./tagDetailPrep.vue";
+	import { reactive } from "vue";
+
+	const icons = reactive({
+		userIcon: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+		clockIcon: new URL("../assets/icons/clock-icon.svg", import.meta.url).href,
+	});
 
 	const arrSlide = [
 		{
@@ -61,19 +67,17 @@
 			title: "Cozy Weekend Chili",
 			detail: [
 				{
-					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+					icons: icons.userIcon,
 					name: "Servings",
 					content: "8 servings",
 				},
 				{
-					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
-						.href,
+					icons: icons.clockIcon,
 					name: "Prep",
 					content: "20 mins prep",
 				},
 				{
-					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
-						.href,
+					icons: icons.clockIcon,
 					name: "Prep",
 					content: "40 mins cook",
 				},
@@ -85,19 +89,17 @@
 			title: "Cinnamon Rolls",
 			detail: [
 				{
-					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+					icons: icons.userIcon,
 					name: "Servings",
 					content: "8 servings",
 				},
 				{
-					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
-						.href,
+					icons: icons.clockIcon,
 					name: "Prep",
 					content: "10 mins prep",
 				},
 				{
-					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
-						.href,
+					icons: icons.clockIcon,
 					name: "Prep",
 					content: "30 mins cook",
 				},
@@ -109,19 +111,17 @@
 			title: "Roasted Butternut Squash Soup",
 			detail: [
 				{
-					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+					icons: icons.userIcon,
 					name: "Servings",
 					content: "6 servings",
 				},
 				{
-					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
-						.href,
+					icons: icons.clockIcon,
 					name: "Prep",
 					content: "20 mins prep",
 				},
 				{
-					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
-						.href,
+					icons: icons.clockIcon,
 					name: "Prep",
 					content: "30 mins cook",
 				},
