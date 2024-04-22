@@ -34,12 +34,13 @@
 					<!-- Cooking Specifications -->
 					<div class="flex flex-row gap-x-2">
 						<template v-for="detail in item.detail">
-							<TagDetailPrep
-								class="text-white border-white"
-								:icon="detail.icons"
-								:title="detail.title"
-								:content="detail.content"
-							/>
+							<TagDetailPrep class="text-white border-white">
+								<template #icon>
+									<img :src="detail.icons" />
+								</template>
+								<p class="text-[8px] uppercase">{{ detail.name }}</p>
+								<p class="text-sm">{{ detail.content }}</p>
+							</TagDetailPrep>
 						</template>
 					</div>
 				</div>
@@ -61,19 +62,19 @@
 			detail: [
 				{
 					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
-					title: "Servings",
+					name: "Servings",
 					content: "8 servings",
 				},
 				{
 					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
 						.href,
-					title: "Prep",
+					name: "Prep",
 					content: "20 mins prep",
 				},
 				{
 					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
 						.href,
-					title: "Prep",
+					name: "Prep",
 					content: "40 mins cook",
 				},
 			],
@@ -85,19 +86,19 @@
 			detail: [
 				{
 					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
-					title: "Servings",
+					name: "Servings",
 					content: "8 servings",
 				},
 				{
 					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
 						.href,
-					title: "Prep",
+					name: "Prep",
 					content: "10 mins prep",
 				},
 				{
 					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
 						.href,
-					title: "Prep",
+					name: "Prep",
 					content: "30 mins cook",
 				},
 			],
@@ -109,19 +110,19 @@
 			detail: [
 				{
 					icons: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
-					title: "Servings",
+					name: "Servings",
 					content: "6 servings",
 				},
 				{
 					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
 						.href,
-					title: "Prep",
+					name: "Prep",
 					content: "20 mins prep",
 				},
 				{
 					icons: new URL("../assets/icons/clock-icon.svg", import.meta.url)
 						.href,
-					title: "Prep",
+					name: "Prep",
 					content: "30 mins cook",
 				},
 			],
