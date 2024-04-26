@@ -45,13 +45,7 @@
 		appear
 		name="bottom-to-top"
 	>
-		<section>
-			<div class="flex w-full h-[242px] bg-secondary-color items-center">
-				<MainLayout>
-					<h2 class="text-white font-bold text-[56px]">Newest recipes</h2>
-				</MainLayout>
-			</div>
-		</section>
+		<SectionTitle class="bg-secondary-color"> Newest recipes </SectionTitle>
 	</transition>
 	<!-- Newest Recipes List -->
 	<section class="mt-20">
@@ -67,9 +61,14 @@
 	import MainLayout from "../components/layout/MainLayout.vue";
 	import constant from "../utils/constant";
 	import { computed, onMounted, ref, watch } from "vue";
-	import { lazyLoadComponentIfVisible } from "../utils/utils";
+	import { lazyLoadComponentIfVisible } from "../utils";
 	const ListCategories = lazyLoadComponentIfVisible({
 		componentLoader: () => import("../components/listCategories.vue"),
+	});
+
+	const SectionTitle = lazyLoadComponentIfVisible({
+		componentLoader: () => import("../components/sectionTitle.vue"),
+		delay: 1000,
 	});
 
 	onMounted(() => {
