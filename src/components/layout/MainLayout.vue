@@ -1,5 +1,5 @@
 <template>
-	<div class="w-[84%] mx-auto">
+	<div class="mx-[120px]">
 		<slot></slot>
 	</div>
 </template>

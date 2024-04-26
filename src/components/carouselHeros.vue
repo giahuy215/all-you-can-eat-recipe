@@ -34,7 +34,7 @@
 					<!-- Cooking Specifications -->
 					<div class="flex flex-row gap-x-2">
 						<template v-for="detail in item.detail">
-							<TagDetailPrep class="text-white border-white">
+							<TagDetailPrep class="py-2 text-white border-white">
 								<template #icon>
 									<img :src="detail.icons" />
 								</template>
@@ -53,9 +53,12 @@
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
 	import TagCategoryName from "./tagCategoryName.vue";
 	import TagDetailPrep from "./tagDetailPrep.vue";
-	import { inject } from "vue";
+	import { reactive } from "vue";
 
-	const icons = inject("icons");
+	const icons = reactive({
+		userIcon: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
+		clockIcon: new URL("../assets/icons/clock-icon.svg", import.meta.url).href,
+	});
 
 	const arrSlide = [
 		{

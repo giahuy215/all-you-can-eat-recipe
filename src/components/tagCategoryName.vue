@@ -2,7 +2,7 @@
 	<div class="flex flex-row gap-x-2">
 		<template v-for="tag in listTagName">
 			<div class="flex bg-white items-center justify-center rounded">
-				<p class="text-sm uppercase font-medium px-3 py-2">
+				<p class="font-default text-sm uppercase font-medium px-3 py-2">
 					{{ tag }}
 				</p>
 			</div>
@@ -17,4 +17,8 @@
 	const listTagName = computed(() => props.listTagName);
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+	.font-default {
+		font-family: "Syne", sans-serif;
+	}
+</style>

@@ -49,16 +49,13 @@
 	</transition>
 	<!-- Newest Recipes List -->
 	<section class="mt-20">
-		<MainLayout>
-			<div>any thing</div>
-		</MainLayout>
+		<ListRecipe></ListRecipe>
 	</section>
 </template>
 
 <script setup>
 	import Header from "../components/header.vue";
-	import Carousel from "../components/carousel.vue";
-	import MainLayout from "../components/layout/MainLayout.vue";
+	import Carousel from "../components/carouselHeros.vue";
 	import constant from "../utils/constant";
 	import { computed, onMounted, ref, watch } from "vue";
 	import { lazyLoadComponentIfVisible } from "../utils";
@@ -68,6 +65,11 @@
 
 	const SectionTitle = lazyLoadComponentIfVisible({
 		componentLoader: () => import("../components/sectionTitle.vue"),
+		delay: 1000,
+	});
+
+	const ListRecipe = lazyLoadComponentIfVisible({
+		componentLoader: () => import("../components/listRecipe.vue"),
 		delay: 1000,
 	});
 
