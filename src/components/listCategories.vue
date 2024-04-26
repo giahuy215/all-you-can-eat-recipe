@@ -108,6 +108,10 @@
 </script>
 
 <style scoped>
+	.font-default {
+		font-family: "Syne", sans-serif;
+	}
+
 	:deep(.slick-slide) {
 		overflow: hidden;
 	}
