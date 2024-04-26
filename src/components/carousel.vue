@@ -53,12 +53,9 @@
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
 	import TagCategoryName from "./tagCategoryName.vue";
 	import TagDetailPrep from "./tagDetailPrep.vue";
-	import { reactive } from "vue";
+	import { inject } from "vue";
 
-	const icons = reactive({
-		userIcon: new URL("../assets/icons/user-icon.svg", import.meta.url).href,
-		clockIcon: new URL("../assets/icons/clock-icon.svg", import.meta.url).href,
-	});
+	const icons = inject("icons");
 
 	const arrSlide = [
 		{
