@@ -124,14 +124,12 @@
 
 	.comp {
 		opacity: 0;
-		/* padding-top: 50px; */
 		transform: translateY(50px);
 	}
 
 	.comp-animation {
 		transition: all 1s ease-in-out;
 		opacity: 1;
-		/* padding-top: 0; */
 		transform: translateY(0);
 	}
 </style>
