@@ -1,20 +1,22 @@
 <template>
-	<MainLayout>
-		<div class="flex flex-col w-full gap-y-10">
-			<template v-for="list in listRecipes">
-				<div class="flex flex-row gap-x-10">
-					<template
-						v-for="recipe in list"
-						:key="recipe.id"
-					>
-						<div class="w-1/3">
-							<CardRecipe :recipe="recipe"></CardRecipe>
-						</div>
-					</template>
-				</div>
-			</template>
-		</div>
-	</MainLayout>
+	<div>
+		<MainLayout>
+			<div class="flex flex-col w-full gap-y-10">
+				<template v-for="list in listRecipes">
+					<div class="flex flex-row gap-x-10">
+						<template
+							v-for="recipe in list"
+							:key="recipe.id"
+						>
+							<div class="w-1/3">
+								<CardRecipe :recipe="recipe"></CardRecipe>
+							</div>
+						</template>
+					</div>
+				</template>
+			</div>
+		</MainLayout>
+	</div>
 </template>
 
 <script setup>

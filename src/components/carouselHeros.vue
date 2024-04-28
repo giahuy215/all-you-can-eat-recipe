@@ -51,7 +51,7 @@
 
 <script setup>
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
-	import TagCategoryName from "./tagCategoryName.vue";
+	import TagCategoryName from "./badges.vue";
 	import TagDetailPrep from "./tagDetailPrep.vue";
 	import { reactive } from "vue";
 

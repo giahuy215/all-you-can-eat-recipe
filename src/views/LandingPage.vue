@@ -34,21 +34,19 @@
 		</section>
 	</transition>
 	<!-- List Category -->
-	<transition
-		appear
-		name="bottom-to-top"
-	>
+	<section class="comp">
 		<ListCategories />
-	</transition>
+	</section>
 	<!-- Newest Recipes Title -->
-	<transition
-		appear
-		name="bottom-to-top"
-	>
-		<SectionTitle class="bg-secondary-color"> Newest recipes </SectionTitle>
-	</transition>
+	<section>
+		<SectionTitle class="bg-secondary-color">
+			<div class="comp">
+				<h2 class="text-white font-bold text-[56px]">Newest Recipes</h2>
+			</div>
+		</SectionTitle>
+	</section>
 	<!-- Newest Recipes List -->
-	<section class="mt-20">
+	<section class="comp mt-20">
 		<ListRecipe></ListRecipe>
 	</section>
 </template>
@@ -57,27 +55,37 @@
 	import Header from "../components/header.vue";
 	import Carousel from "../components/carouselHeros.vue";
 	import constant from "../utils/constant";
-	import { computed, onMounted, ref, watch } from "vue";
-	import { lazyLoadComponentIfVisible } from "../utils";
-	const ListCategories = lazyLoadComponentIfVisible({
-		componentLoader: () => import("../components/listCategories.vue"),
+	import { computed, defineAsyncComponent, onMounted, ref, watch } from "vue";
+
+	const ListCategories = defineAsyncComponent(() =>
+		import("../components/listCategories.vue"),
+	);
+
+	const SectionTitle = defineAsyncComponent(() =>
+		import("../components/sectionTitle.vue"),
+	);
+
+	const ListRecipe = defineAsyncComponent(() =>
+		import("../components/listRecipe.vue"),
+	);
+
+	window.addEventListener("scroll", () => {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("comp-animation");
+				}
+			});
+		});
+
+		const comp = document.querySelectorAll(".comp");
+
+		comp.forEach((comp) => {
+			observer.observe(comp);
+		});
 	});
 
-	const SectionTitle = lazyLoadComponentIfVisible({
-		componentLoader: () => import("../components/sectionTitle.vue"),
-		delay: 1000,
-	});
-
-	const ListRecipe = lazyLoadComponentIfVisible({
-		componentLoader: () => import("../components/listRecipe.vue"),
-		delay: 1000,
-	});
-
-	onMounted(() => {
-		window.onresize = () => {
-			width.value = window.innerWidth;
-		};
-	});
+	onMounted(() => {});
 </script>
 
 <style scoped>
@@ -112,5 +120,18 @@
 	.bottom-to-top-leave-to {
 		transform: translateY(50px);
 		opacity: 0;
+	}
+
+	.comp {
+		opacity: 0;
+		/* padding-top: 50px; */
+		transform: translateY(50px);
+	}
+
+	.comp-animation {
+		transition: all 1s ease-in-out;
+		opacity: 1;
+		/* padding-top: 0; */
+		transform: translateY(0);
 	}
 </style>

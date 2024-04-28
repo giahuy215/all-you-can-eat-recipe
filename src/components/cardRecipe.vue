@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-	import TagCategoryName from "./tagCategoryName.vue";
+	import TagCategoryName from "./badges.vue";
 	import TagDetailPrep from "./tagDetailPrep.vue";
 	import { computed } from "vue";
 
