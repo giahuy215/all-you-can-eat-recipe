@@ -26,7 +26,7 @@
 				></div>
 				<div class="absolute flex flex-col mx-10 bottom-24 gap-y-5 z-10">
 					<!-- Tag name of category -->
-					<TagCategoryName :listTagName="item.tagName" />
+					<Badges :listBadges="item.badges" />
 					<!-- Title of slide -->
 					<div class="text-[40px] leading-tight font-bold text-white">
 						{{ item.title }}
@@ -51,7 +51,7 @@
 
 <script setup>
 	import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons-vue";
-	import TagCategoryName from "./badges.vue";
+	import Badges from "./badges.vue";
 	import TagDetailPrep from "./tagDetailPrep.vue";
 	import { reactive } from "vue";
 
@@ -63,7 +63,7 @@
 	const arrSlide = [
 		{
 			src: "/src/assets/images/slide-1.jpeg",
-			tagName: ["Dinner", "Lunch"],
+			badges: ["Dinner", "Lunch"],
 			title: "Cozy Weekend Chili",
 			detail: [
 				{
@@ -85,7 +85,7 @@
 		},
 		{
 			src: "/src/assets/images/slide-2.jpeg",
-			tagName: ["Breakfast", "Dessert"],
+			badges: ["Breakfast", "Dessert"],
 			title: "Cinnamon Rolls",
 			detail: [
 				{
@@ -107,7 +107,7 @@
 		},
 		{
 			src: "/src/assets/images/slide-3.jpeg",
-			tagName: ["Lunch", "Dinner"],
+			badges: ["Lunch", "Dinner"],
 			title: "Roasted Butternut Squash Soup",
 			detail: [
 				{

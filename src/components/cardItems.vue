@@ -3,15 +3,15 @@
 		<div class="relative w-full">
 			<img
 				class="w-full max-h-[500px] object-cover object-center rounded"
-				:src="recipe.image"
+				:src="listItems.image"
 			/>
 			<div class="absolute top-3 right-3">
-				<TagCategoryName :listTagName="recipe.tagCategory" />
+				<Badges :listBadges="listItems.badges" />
 			</div>
 		</div>
 		<div class="flex flex-col w-full h-1/3">
 			<div class="flex flex-row gap-x-2 my-3">
-				<template v-for="detail in recipe.detailPrep">
+				<template v-for="detail in listItems.detailPrep">
 					<TagDetailPrep
 						class="py-1 text-secondary-color border-secondary-color"
 					>
@@ -26,19 +26,21 @@
 				</template>
 			</div>
 			<div>
-				<span class="font-default text-2xl font-bold">{{ recipe.name }}</span>
+				<span class="font-default text-2xl font-bold">{{
+					listItems.name
+				}}</span>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	import TagCategoryName from "./badges.vue";
+	import Badges from "./badges.vue";
 	import TagDetailPrep from "./tagDetailPrep.vue";
 	import { computed } from "vue";
 
-	const props = defineProps(["recipe"]);
-	const recipe = computed(() => props.recipe);
+	const props = defineProps(["listItems"]);
+	const listItems = computed(() => props.listItems);
 </script>
 
 <style scoped>

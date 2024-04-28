@@ -9,7 +9,7 @@
 							:key="recipe.id"
 						>
 							<div class="w-1/3">
-								<CardRecipe :recipe="recipe"></CardRecipe>
+								<CardItems :listItems="recipe"></CardItems>
 							</div>
 						</template>
 					</div>
@@ -22,7 +22,7 @@
 <script setup>
 	import { reactive } from "vue";
 	import MainLayout from "./layout/MainLayout.vue";
-	import CardRecipe from "./cardRecipe.vue";
+	import CardItems from "./cardItems.vue";
 
 	const icons = reactive({
 		userIcon: new URL("../assets/icons/green-user-icon.svg", import.meta.url)
@@ -38,7 +38,7 @@
 				name: "Yoghurt Stuffed Eggplant",
 				image: new URL("../assets/images/category/Vegan.jpeg", import.meta.url)
 					.href,
-				tagCategory: ["Vegan", "Lunch"],
+				badges: ["Vegan", "Lunch"],
 				detailPrep: [
 					{
 						icons: icons.userIcon,
@@ -61,7 +61,7 @@
 					"../assets/images/category/Breakfast.jpeg",
 					import.meta.url,
 				).href,
-				tagCategory: ["Breakfast", "Dessert"],
+				badges: ["Breakfast", "Dessert"],
 				detailPrep: [
 					{
 						icons: icons.userIcon,
@@ -82,7 +82,7 @@
 				name: "Cozy Weekend Chili",
 				image: new URL("../assets/images/category/Dinner.jpeg", import.meta.url)
 					.href,
-				tagCategory: ["Dinner", "Lunch"],
+				badges: ["Dinner", "Lunch"],
 				detailPrep: [
 					{
 						icons: icons.userIcon,
@@ -107,7 +107,7 @@
 					"../assets/images/category/Dessert.jpeg",
 					import.meta.url,
 				).href,
-				tagCategory: ["Breakfast", "Dessert"],
+				badges: ["Breakfast", "Dessert"],
 				detailPrep: [
 					{
 						icons: icons.userIcon,
@@ -128,7 +128,7 @@
 				name: "Roasted Butternut Squash Soup",
 				image: new URL("../assets/images/category/Lunch2.jpeg", import.meta.url)
 					.href,
-				tagCategory: ["Lunch", "Dinner"],
+				badges: ["Lunch", "Dinner"],
 				detailPrep: [
 					{
 						icons: icons.userIcon,
@@ -149,7 +149,7 @@
 				name: "Watermelon Shrimp Summer Salad",
 				image: new URL("../assets/images/category/Snack.jpeg", import.meta.url)
 					.href,
-				tagCategory: ["Lunch", "Snack"],
+				badges: ["Lunch", "Snack"],
 				detailPrep: [
 					{
 						icons: icons.userIcon,
