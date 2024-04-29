@@ -49,6 +49,16 @@
 	<section class="comp mt-20">
 		<ListRecipe></ListRecipe>
 	</section>
+	<!-- Btn View All Recipes -->
+	<section class="comp w-full my-[68px]">
+		<div class="flex items-center justify-center">
+			<OutlineButton
+				:mainColor="constant.COLOR.SECONDARY"
+				:textHoverColor="constant.COLOR.WHITE"
+				:content="'View All Recipes'"
+			/>
+		</div>
+	</section>
 </template>
 
 <script setup>
@@ -67,6 +77,10 @@
 
 	const ListRecipe = defineAsyncComponent(() =>
 		import("../components/listRecipe.vue"),
+	);
+
+	const OutlineButton = defineAsyncComponent(() =>
+		import("../components/outlineButton.vue"),
 	);
 
 	window.addEventListener("scroll", () => {
