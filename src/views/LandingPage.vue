@@ -61,24 +61,24 @@
 	</section>
 	<!-- Meet the cook -->
 	<section class="mt-40">
-		<div class="w-full h-[472px] bg-primary-color font-default">
+		<div class="w-full h-[472px] bg-primary-color">
 			<MainLayout>
-				<div class="relative w-3/5 bg-primary-color">
+				<div class="relative w-3/5">
 					<img
-						class="absolute h-[592px] object-cover object-center -mt-20 rounded"
+						class="comp absolute h-[592px] object-cover object-center -mt-20 rounded"
 						src="../assets/images/cooking-image.jpg"
 					/>
 				</div>
 				<div class="w-2/5 float-right">
 					<div class="mt-16 pl-11 text-white">
-						<h2 class="text-[56px] font-bold">Meet the cook</h2>
-						<p class="mt-2 text-2xl">Sharon Daniels</p>
-						<p class="mt-5">
+						<h2 class="comp text-[56px] font-bold">Meet the cook</h2>
+						<p class="comp mt-2 text-2xl">Sharon Daniels</p>
+						<p class="comp mt-5">
 							Sharon is a passionate home chef with a focus on simplicity. She
 							crafts easy-to-follow recipes that transform everyday ingredients
 							into delicious creations.
 						</p>
-						<div class="w-fit mt-8">
+						<div class="comp w-fit mt-8">
 							<OutlineButton
 								:mainColor="constant.COLOR.WHITE"
 								:textHoverColor="constant.COLOR.PRIMARY"
@@ -88,6 +88,62 @@
 					</div>
 				</div>
 			</MainLayout>
+		</div>
+	</section>
+	<!-- Mood today -->
+	<section>
+		<div class="w-full h-[500px] bg-secondary-color">
+			<MainLayout class="flex flex-row">
+				<div class="w-1/2 pt-[162px]">
+					<div class="comp text-7xl leading-[86px] font-bold text-white">
+						What are you in the mood for today?
+					</div>
+				</div>
+				<div class="relative w-1/2">
+					<img
+						class="comp absolute w-[496px] h-[480px] mt-[196px] right-0 object-cover object-center rounded-t-full rounded-b-md"
+						src="../assets/images/category/lunch.jpeg"
+					/>
+				</div>
+			</MainLayout>
+		</div>
+		<div class="w-full h-64">
+			<main-layout>
+				<div class="comp flex flex-row pt-8 gap-x-6">
+					<div
+						class="text-[40px] leading-[48px] text-secondary-color font-bold cursor-pointer hover:underline"
+					>
+						Breakfast
+					</div>
+					<div
+						class="text-[40px] leading-[48px] text-secondary-color font-bold cursor-pointer hover:underline"
+					>
+						Dessert
+					</div>
+					<div
+						class="text-[40px] leading-[48px] text-secondary-color font-bold cursor-pointer hover:underline"
+					>
+						Dinner
+					</div>
+				</div>
+				<div class="comp flex flex-row pt-6 gap-x-6">
+					<div
+						class="text-[40px] leading-[48px] text-secondary-color font-bold cursor-pointer hover:underline"
+					>
+						Lunch
+					</div>
+					<div
+						class="text-[40px] leading-[48px] text-secondary-color font-bold cursor-pointer hover:underline"
+					>
+						Snack
+					</div>
+					<div
+						class="text-[40px] leading-[48px] text-secondary-color font-bold cursor-pointer hover:underline"
+					>
+						Vegan
+					</div>
+				</div>
+			</main-layout>
 		</div>
 	</section>
 </template>
@@ -135,7 +191,7 @@
 </script>
 
 <style scoped>
-	.font-default {
+	* {
 		font-family: "Syne", sans-serif;
 	}
 
