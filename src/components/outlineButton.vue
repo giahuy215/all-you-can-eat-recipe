@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="outline-button flex h-11 border rounded items-center"
+		class="outline-button flex h-11 border rounded items-center cursor-pointer"
 		:style="{ 'border-color': mainColor, color: mainColor }"
 	>
 		<p class="px-6 py-4 text-sm font-semibold uppercase">{{ content }}</p>

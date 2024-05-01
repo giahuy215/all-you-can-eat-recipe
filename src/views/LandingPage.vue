@@ -50,7 +50,7 @@
 		<ListRecipe></ListRecipe>
 	</section>
 	<!-- Btn View All Recipes -->
-	<section class="comp w-full my-[68px]">
+	<section class="comp w-full mt-[68px]">
 		<div class="flex items-center justify-center">
 			<OutlineButton
 				:mainColor="constant.COLOR.SECONDARY"
@@ -59,11 +59,43 @@
 			/>
 		</div>
 	</section>
+	<!-- Meet the cook -->
+	<section class="mt-40">
+		<div class="w-full h-[472px] bg-primary-color font-default">
+			<MainLayout>
+				<div class="relative w-3/5 bg-primary-color">
+					<img
+						class="absolute h-[592px] object-cover object-center -mt-20"
+						src="../assets/images/cooking-image.jpg"
+					/>
+				</div>
+				<div class="w-2/5 float-right">
+					<div class="mt-16 pl-11 text-white">
+						<h2 class="text-[56px] font-bold">Meet the cook</h2>
+						<p class="mt-2 text-2xl">Sharon Daniels</p>
+						<p class="mt-5">
+							Sharon is a passionate home chef with a focus on simplicity. She
+							crafts easy-to-follow recipes that transform everyday ingredients
+							into delicious creations.
+						</p>
+						<div class="w-fit mt-8">
+							<OutlineButton
+								:mainColor="constant.COLOR.WHITE"
+								:textHoverColor="constant.COLOR.PRIMARY"
+								:content="'About me'"
+							/>
+						</div>
+					</div>
+				</div>
+			</MainLayout>
+		</div>
+	</section>
 </template>
 
 <script setup>
 	import Header from "../components/header.vue";
 	import Carousel from "../components/carouselHeros.vue";
+	import MainLayout from "../components/layout/MainLayout.vue";
 	import constant from "../utils/constant";
 	import { computed, defineAsyncComponent, onMounted, ref, watch } from "vue";
 

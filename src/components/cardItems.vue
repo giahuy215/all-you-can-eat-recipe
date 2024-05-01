@@ -1,5 +1,7 @@
 <template>
-	<div class="font-default flex flex-col w-full max-w-[400px] h-[585px]">
+	<div
+		class="font-default flex flex-col w-full max-w-[400px] h-[585px] cursor-pointer"
+	>
 		<div class="items relative w-full">
 			<img
 				class="w-full max-h-[500px] object-cover object-center rounded"
