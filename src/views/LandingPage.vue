@@ -65,7 +65,7 @@
 			<MainLayout>
 				<div class="relative w-3/5 bg-primary-color">
 					<img
-						class="absolute h-[592px] object-cover object-center -mt-20"
+						class="absolute h-[592px] object-cover object-center -mt-20 rounded"
 						src="../assets/images/cooking-image.jpg"
 					/>
 				</div>
