@@ -26,7 +26,10 @@
 								<img src="../assets/icons/green-arrow-right-icon.svg" />
 							</div>
 						</template>
-						<template v-for="item in listCategory">
+						<template
+							v-for="item in listCategory"
+							:key="item"
+						>
 							<div class="!flex items-center justify-center">
 								<MiniCard
 									:content="item.content"

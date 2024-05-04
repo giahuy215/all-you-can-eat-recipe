@@ -14,7 +14,10 @@
 				<ArrowRightOutlined />
 			</div>
 		</template>
-		<template v-for="item in arrSlide">
+		<template
+			v-for="item in arrSlide"
+			:key="item"
+		>
 			<div class="relative w-full h-full">
 				<img
 					class="w-full h-[640px] object-cover rounded-bl-[0.25rem]"
@@ -33,7 +36,10 @@
 					</div>
 					<!-- Cooking Specifications -->
 					<div class="flex flex-row gap-x-2">
-						<template v-for="detail in item.detail">
+						<template
+							v-for="detail in item.detail"
+							:key="detail.name"
+						>
 							<TagDetailPrep class="py-2 text-white border-white">
 								<template #icon>
 									<img :src="detail.icons" />
