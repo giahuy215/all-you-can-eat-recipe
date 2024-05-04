@@ -2,7 +2,10 @@
 	<div>
 		<MainLayout>
 			<div class="flex flex-col w-full gap-y-10">
-				<template v-for="list in listRecipes">
+				<template
+					v-for="(list, index) in listRecipes"
+					:key="index"
+				>
 					<div class="flex flex-row gap-x-10">
 						<template
 							v-for="recipe in list"

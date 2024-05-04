@@ -27,7 +27,10 @@
 		</div>
 		<div class="flex flex-col w-full h-1/3">
 			<div class="flex flex-row gap-x-2 my-3">
-				<template v-for="detail in listItems.detailPrep">
+				<template
+					v-for="(detail, index) in listItems.detailPrep"
+					:key="index"
+				>
 					<TagDetailPrep
 						class="py-1 text-secondary-color border-secondary-color"
 					>
