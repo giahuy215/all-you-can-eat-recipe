@@ -26,10 +26,16 @@
 								v-for="(logo, index) in socialLogo"
 								:key="index"
 							>
-								<img
-									class="w-6 h-6"
-									:src="logo"
-								/>
+								<a
+									:href="logo.link"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<img
+										class="w-6 h-6"
+										:src="logo.image"
+									/>
+								</a>
 							</template>
 						</div>
 						<div class="flex mt-10 text-white">
@@ -49,13 +55,26 @@
 	import MainLayout from "./layout/MainLayout.vue";
 
 	const socialLogo = reactive({
-		tiktok: new URL("../assets/logo/tiktok-logo.svg", import.meta.url).href,
-		instagram: new URL("../assets/logo/instagram-logo.svg", import.meta.url)
-			.href,
-		pinterest: new URL("../assets/logo/pinterest-logo.svg", import.meta.url)
-			.href,
-		facebook: new URL("../assets/logo/facebook-logo.svg", import.meta.url).href,
-		x: new URL("../assets/logo/x-logo.svg", import.meta.url).href,
+		tiktok: {
+			image: new URL("../assets/logo/tiktok-logo.svg", import.meta.url).href,
+			link: "https://www.tiktok.com/",
+		},
+		instagram: {
+			image: new URL("../assets/logo/instagram-logo.svg", import.meta.url).href,
+			link: "https://www.instagram.com/",
+		},
+		pinterest: {
+			image: new URL("../assets/logo/pinterest-logo.svg", import.meta.url).href,
+			link: "https://www.pinterest.com/",
+		},
+		facebook: {
+			image: new URL("../assets/logo/facebook-logo.svg", import.meta.url).href,
+			link: "https://www.facebook.com/",
+		},
+		x: {
+			image: new URL("../assets/logo/x-logo.svg", import.meta.url).href,
+			link: "https://www.x.com/",
+		},
 	});
 </script>
 

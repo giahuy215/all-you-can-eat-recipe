@@ -16,11 +16,11 @@
 					A blog full of easy to make recipes that take the stress out of
 					cooking.
 				</p>
-				<button
-					class="w-44 h-11 uppercase text-sm font-medium border border-primary-color rounded"
-				>
-					View All Recipes
-				</button>
+				<OutlineButton
+					:mainColor="constant.COLOR.PRIMARY"
+					:textHoverColor="constant.COLOR.WHITE"
+					:content="'View All Recipes'"
+				/>
 			</div>
 			<div class="w-1/2">
 				<Carousel />
