@@ -146,6 +146,28 @@
 			</main-layout>
 		</div>
 	</section>
+	<!-- Blog title -->
+	<section>
+		<SectionTitle class="bg-primary-color">
+			<div class="comp">
+				<h2 class="text-white font-bold text-[56px]">From the blog</h2>
+			</div>
+		</SectionTitle>
+	</section>
+	<!-- Blog list -->
+	<section class="comp mt-20">
+		<ListBlog />
+	</section>
+	<!-- Btn View all posts -->
+	<section class="comp w-full mt-[68px]">
+		<div class="flex items-center justify-center">
+			<OutlineButton
+				:mainColor="constant.COLOR.PRIMARY"
+				:textHoverColor="constant.COLOR.WHITE"
+				:content="'View All Posts'"
+			/>
+		</div>
+	</section>
 </template>
 
 <script setup>
@@ -169,6 +191,10 @@
 
 	const OutlineButton = defineAsyncComponent(() =>
 		import("../components/outlineButton.vue"),
+	);
+
+	const ListBlog = defineAsyncComponent(() =>
+		import("../components/listBlog.vue"),
 	);
 
 	window.addEventListener("scroll", () => {

@@ -12,4 +12,7 @@ export default {
 		SECONDARY: "#0f7a60",
 		WHITE: "white",
 	},
+	DATE_FORMAT: {
+		MMMM_DD_YYYY: "MMMM DD, YYYY",
+	},
 };
