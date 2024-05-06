@@ -12,7 +12,11 @@
 								<p class="text-2xl font-bold">
 									{{ blog.name }}
 								</p>
-								<p>{{ `${blog.author} | ${blog.datePost}` }}</p>
+								<p>
+									{{ blog.author }}
+									<span class="px-1">|</span>
+									{{ blog.datePost }}
+								</p>
 							</div>
 						</template>
 						<template #modal-content>
