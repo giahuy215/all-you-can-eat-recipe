@@ -25,35 +25,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex flex-col w-full h-1/3">
-			<div class="flex flex-row gap-x-2 my-3">
-				<template
-					v-for="(detail, index) in listItems.detailPrep"
-					:key="index"
-				>
-					<TagDetailPrep
-						class="py-1 text-secondary-color border-secondary-color"
-					>
-						<template #icon>
-							<img
-								class="w-4 h-4 my-auto"
-								:src="detail.icons"
-							/>
-						</template>
-						<p class="text-sm">{{ detail.content }}</p>
-					</TagDetailPrep>
-				</template>
-			</div>
-			<div>
-				<span class="text-2xl font-bold">{{ listItems.name }}</span>
-			</div>
-		</div>
+		<slot name="cardFooter"></slot>
 	</div>
 </template>
 
 <script setup>
 	import Badges from "./badges.vue";
-	import TagDetailPrep from "./tagDetailPrep.vue";
 	import { computed } from "vue";
 
 	const props = defineProps(["listItems"]);

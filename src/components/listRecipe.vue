@@ -12,7 +12,35 @@
 							:key="recipe.id"
 						>
 							<div class="w-1/3">
-								<CardItems :listItems="recipe"></CardItems>
+								<CardItems :listItems="recipe">
+									<template #cardFooter>
+										<div class="flex flex-col w-full h-1/3">
+											<div class="flex flex-row gap-x-2 my-3">
+												<template
+													v-for="(detail, index) in recipe.detailPrep"
+													:key="index"
+												>
+													<TagDetailPrep
+														class="py-1 text-secondary-color border-secondary-color"
+													>
+														<template #icon>
+															<img
+																class="w-4 h-4 my-auto"
+																:src="detail.icons"
+															/>
+														</template>
+														<p class="text-sm">{{ detail.content }}</p>
+													</TagDetailPrep>
+												</template>
+											</div>
+											<div>
+												<span class="text-2xl font-bold">
+													{{ recipe.name }}
+												</span>
+											</div>
+										</div>
+									</template>
+								</CardItems>
 							</div>
 						</template>
 					</div>
@@ -26,6 +54,7 @@
 	import { reactive } from "vue";
 	import MainLayout from "./layout/MainLayout.vue";
 	import CardItems from "./cardItems.vue";
+	import TagDetailPrep from "./tagDetailPrep.vue";
 
 	const icons = reactive({
 		userIcon: new URL("../assets/icons/green-user-icon.svg", import.meta.url)
