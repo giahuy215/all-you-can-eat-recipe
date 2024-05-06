@@ -78,7 +78,7 @@
 							crafts easy-to-follow recipes that transform everyday ingredients
 							into delicious creations.
 						</p>
-						<div class="comp w-fit mt-8">
+						<div class="comp mt-8">
 							<OutlineButton
 								:mainColor="constant.COLOR.WHITE"
 								:textHoverColor="constant.COLOR.PRIMARY"
@@ -168,6 +168,33 @@
 			/>
 		</div>
 	</section>
+	<!-- Sign up for the newsletter -->
+	<section
+		class="flex w-full h-[361px] mt-20 bg-light-yellow items-center text-primary-color"
+	>
+		<main-layout class="flex flex-row">
+			<div class="flex w-1/2">
+				<p class="text-[56px] leading-[67px] font-bold">
+					Want more recipes straight to your inbox?
+				</p>
+			</div>
+			<div class="flex flex-col w-1/2 mt-5 ml-9">
+				<p class="text-2xl leading-[38px]">Sign up for the newsletter.</p>
+				<input
+					class="w-full h-12 mt-4 p-4 border-b border-b-primary-color rounded text-sm"
+					type="text"
+					placeholder="Enter your email"
+				/>
+				<div class="mt-4">
+					<outline-button
+						:mainColor="constant.COLOR.PRIMARY"
+						:textHoverColor="constant.COLOR.WHITE"
+						:content="'Submit'"
+					/>
+				</div>
+			</div>
+		</main-layout>
+	</section>
 </template>
 
 <script setup>
@@ -175,7 +202,7 @@
 	import Carousel from "../components/carouselHeros.vue";
 	import MainLayout from "../components/layout/MainLayout.vue";
 	import constant from "../utils/constant";
-	import { computed, defineAsyncComponent, onMounted, ref, watch } from "vue";
+	import { defineAsyncComponent, onMounted } from "vue";
 
 	const ListCategories = defineAsyncComponent(() =>
 		import("../components/listCategories.vue"),
@@ -259,5 +286,43 @@
 		transition: all 1s ease-in-out;
 		opacity: 1;
 		transform: translateY(0);
+	}
+
+	textarea:focus,
+	input:focus {
+		outline: none;
+	}
+
+	input {
+		outline: none;
+	}
+
+	/* Change color placeholder */
+	::-webkit-input-placeholder {
+		/* WebKit, Blink, Edge */
+		color: #2f5fc7;
+	}
+	:-moz-placeholder {
+		/* Mozilla Firefox 4 to 18 */
+		color: #2f5fc7;
+		opacity: 1;
+	}
+	::-moz-placeholder {
+		/* Mozilla Firefox 19+ */
+		color: #2f5fc7;
+		opacity: 1;
+	}
+	:-ms-input-placeholder {
+		/* Internet Explorer 10-11 */
+		color: #2f5fc7;
+	}
+	::-ms-input-placeholder {
+		/* Microsoft Edge */
+		color: #2f5fc7;
+	}
+
+	::placeholder {
+		/* Most modern browsers support this now. */
+		color: #2f5fc7;
 	}
 </style>
