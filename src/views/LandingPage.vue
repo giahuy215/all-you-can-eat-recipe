@@ -1,10 +1,4 @@
 <template>
-	<div
-		class="flex w-full h-12 bg-primary-color text-white justify-center items-center"
-	>
-		<p class="ml-2">New recipes added every week!</p>
-	</div>
-	<Header />
 	<transition
 		appear
 		name="bottom-to-top"

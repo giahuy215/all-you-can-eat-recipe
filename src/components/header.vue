@@ -1,4 +1,9 @@
 <template>
+	<div
+		class="flex w-full h-12 bg-primary-color text-white justify-center items-center"
+	>
+		<p class="ml-2">New recipes added every week!</p>
+	</div>
 	<header
 		class="flex flex-row w-[84%] h-[58px] ml-[8%] justify-between items-center"
 	>
