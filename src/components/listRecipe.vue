@@ -12,7 +12,7 @@
 							:key="recipe.id"
 						>
 							<div class="w-1/3">
-								<CardItems :listItems="recipe">
+								<CardItems :itemData="recipe">
 									<template #cardFooter>
 										<div class="flex flex-col w-full h-1/3">
 											<div class="flex flex-row gap-x-2 my-3">

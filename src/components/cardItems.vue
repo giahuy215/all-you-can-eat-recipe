@@ -5,10 +5,10 @@
 		<div class="items relative w-full">
 			<img
 				class="w-full max-h-[500px] object-cover object-center rounded"
-				:src="listItems.image"
+				:src="itemData.image"
 			/>
 			<div class="absolute top-3 right-3">
-				<Badges :listBadges="listItems.badges" />
+				<Badges :listBadges="itemData.badges" />
 			</div>
 			<div class="items-modal w-full h-10 bottom-3">
 				<div
@@ -33,8 +33,8 @@
 	import Badges from "./badges.vue";
 	import { computed } from "vue";
 
-	const props = defineProps(["listItems"]);
-	const listItems = computed(() => props.listItems);
+	const props = defineProps(["itemData"]);
+	const itemData = computed(() => props.itemData);
 </script>
 
 <style scoped>
