@@ -167,12 +167,12 @@
 		class="flex w-full h-[361px] mt-20 bg-light-yellow items-center text-primary-color"
 	>
 		<main-layout class="flex flex-row">
-			<div class="flex w-1/2">
+			<div class="comp flex w-1/2">
 				<p class="text-[56px] leading-[67px] font-bold">
 					Want more recipes straight to your inbox?
 				</p>
 			</div>
-			<div class="flex flex-col w-1/2 mt-5 ml-9">
+			<div class="comp flex flex-col w-1/2 mt-5 ml-9">
 				<p class="text-2xl leading-[38px]">Sign up for the newsletter.</p>
 				<input
 					class="w-full h-12 mt-4 p-4 border-b border-b-primary-color rounded text-sm"
@@ -192,7 +192,6 @@
 </template>
 
 <script setup>
-	import Header from "../components/header.vue";
 	import Carousel from "../components/carouselHeros.vue";
 	import MainLayout from "../components/layout/MainLayout.vue";
 	import constant from "../utils/constant";
