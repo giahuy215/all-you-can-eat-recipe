@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-	import MainLayout from "./layout/MainLayout.vue";
+	import MainLayout from "../layout/MainLayout.vue";
 	import CardItems from "./cardItems.vue";
 	import moment from "moment";
 	import constant from "../utils/constant";

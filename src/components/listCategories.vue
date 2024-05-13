@@ -46,7 +46,7 @@
 
 <script setup>
 	import MiniCard from "../components/miniCard.vue";
-	import MainLayout from "../components/layout/MainLayout.vue";
+	import MainLayout from "../layout/MainLayout.vue";
 	import { ref, watch } from "vue";
 	import constant from "../utils/constant";
 

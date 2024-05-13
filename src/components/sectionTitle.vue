@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-	import MainLayout from "./layout/MainLayout.vue";
+	import MainLayout from "../layout/MainLayout.vue";
 </script>
 
 <style lang="scss" scoped></style>

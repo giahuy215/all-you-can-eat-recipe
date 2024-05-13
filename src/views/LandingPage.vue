@@ -193,7 +193,7 @@
 
 <script setup>
 	import Carousel from "../components/carouselHeros.vue";
-	import MainLayout from "../components/layout/MainLayout.vue";
+	import MainLayout from "../layout/MainLayout.vue";
 	import constant from "../utils/constant";
 	import { defineAsyncComponent, onMounted } from "vue";
 

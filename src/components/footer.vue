@@ -52,7 +52,7 @@
 
 <script setup>
 	import { reactive } from "vue";
-	import MainLayout from "./layout/MainLayout.vue";
+	import MainLayout from "../layout/MainLayout.vue";
 
 	const socialLogo = reactive({
 		tiktok: {
