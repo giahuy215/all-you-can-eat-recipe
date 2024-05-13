@@ -1,6 +1,9 @@
 <template>
 	<div class="flex flex-row gap-x-2">
-		<template v-for="badge in listBadges">
+		<template
+			v-for="badge in listBadges"
+			:key="badge"
+		>
 			<div class="flex bg-white items-center justify-center rounded">
 				<p class="font-default text-sm uppercase font-medium px-3 py-2">
 					{{ badge }}
