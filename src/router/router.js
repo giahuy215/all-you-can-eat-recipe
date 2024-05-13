@@ -8,5 +8,10 @@ export default createRouter({
 			name: "LandingPage",
 			component: () => import("../views/LandingPage.vue"),
 		},
+		{
+			path: "/recipe/:name",
+			name: "DetailPage",
+			component: () => import("../views/DetailPage.vue"),
+		},
 	],
 });
