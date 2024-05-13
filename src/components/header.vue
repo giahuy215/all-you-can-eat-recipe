@@ -15,10 +15,12 @@
 			<p class="font-bold text-blue-600">Menu</p>
 		</div>
 		<div class="flex -ml-11">
-			<img
-				class="w-[171px] h-10"
-				src="../assets/logo/main-logo.svg"
-			/>
+			<router-link to="/">
+				<img
+					class="w-[171px] h-10"
+					src="../assets/logo/main-logo.svg"
+				/>
+			</router-link>
 		</div>
 		<div class="flex">
 			<img src="../assets/icons/search-icon.svg" />
